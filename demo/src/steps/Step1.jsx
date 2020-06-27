@@ -1,6 +1,6 @@
 import React, { useState, createRef } from 'react';
 
-export function Step1() {
+export function Step() {
   const [value, setValue] = useState(930)
   const inputRef = createRef();
   return (
@@ -22,4 +22,4 @@ export function Step1() {
   );
 }
 
-export default Step1;
+export default Step;

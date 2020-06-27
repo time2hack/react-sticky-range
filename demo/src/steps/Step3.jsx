@@ -1,11 +1,24 @@
 import React, { useState, createRef } from 'react';
 
-export function Step2() {
+const displayValue = value => {
+  const separator = ':';
+  let suffix = '00';
+  if (value !== Math.floor(+value)) {
+    suffix = '30';
+  }
+  return [
+    Math.floor(+value),
+    separator,
+    suffix
+  ].join('');
+}
+
+export function Step() {
   const [value, setValue] = useState(10)
   const inputRef = createRef();
   return (
     <div className="input-container">
-      <span>Type 2:</span>
+      <span>Type 3:</span>
       <span>
         <input
           type="range"
@@ -17,9 +30,9 @@ export function Step2() {
           onChange={() => setValue(+((inputRef.current || {}).value || 0))}
         />
       </span>
-      <span>{value}</span>
+      <span>{displayValue(value)}</span>
     </div>
   );
 }
 
-export default Step2;
+export default Step;
