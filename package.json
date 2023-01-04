@@ -19,7 +19,7 @@
   "homepage": "https://github.com/time2hack/react-sticky-range#readme",
   "devDependencies": {
     "prettier": "^2.0.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
